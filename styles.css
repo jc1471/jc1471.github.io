@@ -1,0 +1,70 @@
+.hero {
+    position: relative;
+    background-image: url('./media/BH5481_3JuliaGirosHQ_ADDED-BACKGROUND_2.jpg');
+    width: 100%;
+    height: 100%;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: 0% 35%;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+   
+   
+    /*
+    position: relative;
+    width: 100%;
+    height: 100vh; /* fill the full screen height */
+    /*
+    background-image: url('./media/BH5481_3JuliaGirosHQ_ADDED-BACKGROUND.jpg');
+    background-repeat: no-repeat;
+    background-size: contain; /* shows full image with band in center */
+    /*
+    background-position: center top; /* align band to center, keep top visible */
+    /*background-color: #ddd6ce; /* a dark burgundy fallback color */
+    /*
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    */
+}
+
+/* Keep logo nicely at the top */
+.banner {
+    display: hidden;
+    width: 100%;
+    text-align: center;
+    padding-top: 2rem;
+    z-index: 2;
+}
+
+.banner .logo {
+    max-width: 35%;
+    height: auto;
+    filter: brightness(0) saturate(100%) invert(12%) sepia(80%) saturate(800%) hue-rotate(310deg); /* burgundy tint */
+}
+
+/* Nav bar inside hero section */
+.navbar {
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    z-index: 2;
+}
+
+.navbar ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    margin: 0;
+}
+
+.navbar li {
+    font-weight: bold;
+    font-size: 1.1rem;
+}

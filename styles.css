@@ -83,3 +83,48 @@
     font-size: 1.1rem;
      filter: brightness(0) saturate(100%) invert(12%) sepia(80%) saturate(800%) hue-rotate(310deg); /* burgundy tint */
 }
+
+.music {
+    position: relative;
+    background-image: url('./media/BH5254_3JuliaGirosHQ_BG.jpg');
+    width: 100%;
+    height: 100%;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: 0% 35%;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+   }
+
+   .videos {
+    position: relative;
+    background-image: url('./media/BH5563_3JuliaGirosHQ.jpg');
+    width: 100%;
+    height: 100%;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: 0% 35%;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+   }
+
+   .shows {
+    position: relative;
+    background-image: url('./media/BH5324_3JuliaGirosHQ_BG.jpg');
+    width: 100%;
+    height: 100%;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: 0% 35%;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+   }

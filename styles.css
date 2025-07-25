@@ -10,14 +10,18 @@
   font-weight: 400;
 }
 
+body {
+    overflow-x: hidden;
+}
+
 .hero {
     position: relative;
     background-image: url('./media/BH5481_3JuliaGirosHQ_ADDED-BACKGROUND_2.jpg');
-    width: 100%;
-    height: 100%;
-    background-size: 100%;
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
     background-repeat: no-repeat;
-    background-position: 0% 35%;
+    background-position: 0% 30%;
     
     display: flex;
     flex-direction: column;
@@ -80,15 +84,15 @@
     /* font-family: "Special Gothic Expanded One"; */
     font-family: "Playfair Display";
     /* font-weight: bold; */
-    font-size: 1.1rem;
+    font-size: 1.3rem;
      filter: brightness(0) saturate(100%) invert(12%) sepia(80%) saturate(800%) hue-rotate(310deg); /* burgundy tint */
 }
 
 .music {
     position: relative;
     background-image: url('./media/BH5254_3JuliaGirosHQ_BG.jpg');
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     background-size: 100%;
     background-repeat: no-repeat;
     background-position: 0% 35%;
@@ -102,11 +106,11 @@
    .videos {
     position: relative;
     background-image: url('./media/BH5563_3JuliaGirosHQ.jpg');
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     background-size: 100%;
     background-repeat: no-repeat;
-    background-position: 0% 35%;
+    background-position: 0% 25%;
     
     display: flex;
     flex-direction: column;
@@ -117,8 +121,8 @@
    .shows {
     position: relative;
     background-image: url('./media/BH5324_3JuliaGirosHQ_BG.jpg');
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     background-size: 100%;
     background-repeat: no-repeat;
     background-position: 0% 35%;
@@ -128,3 +132,90 @@
     align-items: center;
     justify-content: flex-start;
    }
+
+   /* Music Carousel */
+
+   
+.music-carousel-container {
+  position: relative;
+  width: 80%;
+  right: 9%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 2;
+
+}
+
+.carousel-slide {
+  position: relative;
+  width: 100%;
+  height: 50%;
+  top: 25%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.release {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.5s ease;
+
+}
+
+.release-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+
+}
+
+.release .info-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    color: antiquewhite;
+}
+
+
+.release img {
+    height: 100%;
+    width: auto;
+    max-width: 28%;
+    box-shadow: 10 10 25px rgba(255, 255, 255, 0.5);
+}
+
+.release-title {
+    margin-top: 1rem;
+    font-size: 2rem;
+}
+
+.release-info {
+    font-size: 1.5rem;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  background: transparent;
+  color: white;
+  border: none;
+  cursor: pointer;
+  z-index: 2;
+  padding: 0.5rem;
+}
+
+.arrow.left {
+  left: 5%;
+}
+
+.arrow.right {
+  right: 5%;
+}

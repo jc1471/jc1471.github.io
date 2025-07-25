@@ -6,34 +6,46 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Special+Gothic+Expanded+One&display=swap" rel="stylesheet">
+    <title>Bloomhaus Music</title>
 </head>
 <body>
-    <div class="hero">
-        <header class="banner">
-            <img class="logo" src="./media/bloomhaus_logo-01.png" alt="logo">
-        </header>
-        <nav class="navbar">
-            <ul>
-                <li>Music</li>
-                <li>Videos</li>
-                <li>Shows</li>
-                <li>Contact</li>
-            </ul>
-        </nav>
-    </div>
-    <div class="music" id="music">
-
-    </div>
-    <div class="videos" id="videos">
-
-    </div>
-    <div class="shows" id="shows">
-
-    </div>
-    <div class="contact" id="contact">
-
-    </div>
     <main>
+        <div class="hero">
+            <header class="banner">
+                <img class="logo" src="./media/bloomhaus_logo-01.png" alt="logo">
+            </header>
+            <nav class="navbar">
+                <ul>
+                    <li>Music</li>
+                    <li>Videos</li>
+                    <li>Shows</li>
+                    <li>Contact</li>
+                </ul>
+            </nav>
+        </div>
+        <div class="music" id="music">
+            <div class="music-carousel-container">
+                <button class="arrow left">←</button>
+
+                <div class="carousel-slide">
+                    <div class="release" id="release-display">    
+                    </div>
+                </div>
+
+                <button class="arrow right">→</button>
+            </div>
+        </div>
+        <div class="videos" id="videos">
+
+        </div>
+        <div class="shows" id="shows">
+
+        </div>
+        <div class="contact" id="contact">
+
+        </div>
+
     </main>
+    <script src="script.js"></script>
 </body>
 </html>

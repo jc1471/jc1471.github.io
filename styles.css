@@ -1,3 +1,15 @@
+/* Fonts */
+
+.playfair {
+  font-family: "Playfair Display", serif;
+  font-weight: 500;
+}
+
+.special-gothic {
+  font-family: "Special Gothic Expanded One", sans-serif;
+  font-weight: 400;
+}
+
 .hero {
     position: relative;
     background-image: url('./media/BH5481_3JuliaGirosHQ_ADDED-BACKGROUND_2.jpg');
@@ -51,20 +63,23 @@
 .navbar {
     margin-top: 1rem;
     padding: 0.5rem 1rem;
-    border-radius: 10px;
+    width: 100%;
     z-index: 2;
 }
 
 .navbar ul {
     list-style: none;
+    margin: 0 auto;
     padding: 0;
     display: flex;
-    gap: 2rem;
-    justify-content: center;
-    margin: 0;
+    justify-content: space-around;
+    width: 70%;
 }
 
 .navbar li {
-    font-weight: bold;
+    /* font-family: "Special Gothic Expanded One"; */
+    font-family: "Playfair Display";
+    /* font-weight: bold; */
     font-size: 1.1rem;
+     filter: brightness(0) saturate(100%) invert(12%) sepia(80%) saturate(800%) hue-rotate(310deg); /* burgundy tint */
 }

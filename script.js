@@ -5,7 +5,8 @@ const releases = [
         title: "Endless Hours",
         info: "LP",
         year: "2025",
-        cover: "./media/releases/endless-hours-cover.jpg"
+        cover: "./media/releases/endless-hours-cover.jpg",
+        spotifyEmbed: "https://open.spotify.com/album/56zbigxmWg2J3zOOkREkas?si=sXbE7n_lQ_qW5hdIqUSh6Q",
     },
     {
         title: "Dreams",
@@ -50,9 +51,17 @@ function showRelease(index) {
     const release = releases[index];
     releaseDisplay.innerHTML = `
         <div class="release-container">
-            <div class="info-box">
+            <div class="spotify-player">
                 <div class="release-title">${release.title}</div>
-                <div class="release-info">${release.info}</div> 
+                <div class="release-info">${release.info}</div>
+                <iframe style="border-radius:12px" 
+                src="${release.spotifyEmbed}" 
+                width="300" 
+                height="380" 
+                frameborder="0" 
+                allowfullscreen="" 
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
+                </iframe> 
             </div>   
             <img src="${release.cover}" alt="${release.title}" />
         </div>

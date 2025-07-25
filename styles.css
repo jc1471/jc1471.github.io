@@ -173,7 +173,7 @@ body {
 
 }
 
-.release .info-box {
+.release .spotify-player {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -187,7 +187,10 @@ body {
     height: 100%;
     width: auto;
     max-width: 28%;
-    box-shadow: 10 10 25px rgba(255, 255, 255, 0.5);
+    box-shadow: 100 100 125px rgba(255, 255, 255, 1);
+    border-radius: 5px;
+    border: solid 5px darkred;
+
 }
 
 .release-title {

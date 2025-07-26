@@ -10,14 +10,29 @@
   font-weight: 400;
 }
 
-body {
+html, body {
+    margin: 0;
+    padding: 0;
     overflow-x: hidden;
+}
+
+/* Scroll snapping to sections */
+main {
+    height: 100vh;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+}
+
+/* Makes each section a snap point */
+.hero, .music, .videos, .shows, .contact {
+    scroll-snap-align: start;
 }
 
 .hero {
     position: relative;
     background-image: url('./media/BH5481_3JuliaGirosHQ_ADDED-BACKGROUND_2_CONVERT.webp');
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     background-size: cover;
     background-repeat: no-repeat;
@@ -97,7 +112,7 @@ body {
 .music {
     position: relative;
     background-image: url('./media/BH5254_3JuliaGirosHQ_BG_CONVERT.webp');
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     background-size: 100%;
     background-repeat: no-repeat;
@@ -109,10 +124,25 @@ body {
     justify-content: flex-start;
    }
 
+.music h1 {
+    font-family: "Playfair Display";
+    font-size: 2rem;
+    filter: brightness(0) saturate(100%) invert(12%) sepia(80%) saturate(800%) hue-rotate(310deg); /* burgundy tint */
+}
+
+.music h2 {
+    font-family: "Playfair Display";
+    font-size: 1.5rem;
+    border: solid 2px darkred;
+    border-radius: 50px;
+    padding: 5px 20px;
+    filter: brightness(0) saturate(100%) invert(12%) sepia(80%) saturate(800%) hue-rotate(310deg); /* burgundy tint */
+}
+
    .videos {
     position: relative;
     background-image: url('./media/BH5563_3JuliaGirosHQ_CONVERT.webp');
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     background-size: 100%;
     background-repeat: no-repeat;
@@ -127,7 +157,7 @@ body {
    .shows {
     position: relative;
     background-image: url('./media/BH5324_3JuliaGirosHQ_BG_CONVERT.webp');
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     background-size: 100%;
     background-repeat: no-repeat;

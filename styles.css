@@ -16,7 +16,7 @@ body {
 
 .hero {
     position: relative;
-    background-image: url('./media/BH5481_3JuliaGirosHQ_ADDED-BACKGROUND_2.jpg');
+    background-image: url('./media/BH5481_3JuliaGirosHQ_ADDED-BACKGROUND_2_CONVERT.webp');
     width: 100vw;
     height: 100vh;
     background-size: cover;
@@ -84,18 +84,24 @@ body {
     /* font-family: "Special Gothic Expanded One"; */
     font-family: "Playfair Display";
     /* font-weight: bold; */
-    font-size: 1.3rem;
-     filter: brightness(0) saturate(100%) invert(12%) sepia(80%) saturate(800%) hue-rotate(310deg); /* burgundy tint */
+    font-size: 1.5rem;
+    cursor: pointer;
+    filter: brightness(0) saturate(100%) invert(12%) sepia(80%) saturate(800%) hue-rotate(310deg); /* burgundy tint */
+    transition: transform 0.3s ease;
+    }
+
+.navbar li:hover {
+    transform: scale(1.15);
 }
 
 .music {
     position: relative;
-    background-image: url('./media/BH5254_3JuliaGirosHQ_BG.jpg');
+    background-image: url('./media/BH5254_3JuliaGirosHQ_BG_CONVERT.webp');
     width: 100vw;
     height: 100vh;
     background-size: 100%;
     background-repeat: no-repeat;
-    background-position: 0% 35%;
+    background-position: 0% 73%;
     
     display: flex;
     flex-direction: column;
@@ -105,7 +111,7 @@ body {
 
    .videos {
     position: relative;
-    background-image: url('./media/BH5563_3JuliaGirosHQ.jpg');
+    background-image: url('./media/BH5563_3JuliaGirosHQ_CONVERT.webp');
     width: 100vw;
     height: 100vh;
     background-size: 100%;
@@ -120,7 +126,7 @@ body {
 
    .shows {
     position: relative;
-    background-image: url('./media/BH5324_3JuliaGirosHQ_BG.jpg');
+    background-image: url('./media/BH5324_3JuliaGirosHQ_BG_CONVERT.webp');
     width: 100vw;
     height: 100vh;
     background-size: 100%;
@@ -162,7 +168,6 @@ body {
   height: 100%;
   text-align: center;
   transition: transform 0.5s ease;
-
 }
 
 .release-container {
@@ -170,16 +175,17 @@ body {
     align-items: center;
     justify-content: space-evenly;
     width: 100%;
-
 }
 
 .release .spotify-player {
+    height: 47vh;
+    width: 28%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: left;
     color: antiquewhite;
+    background-color: RGB(88,16,32);
 }
 
 
@@ -187,9 +193,9 @@ body {
     height: 100%;
     width: auto;
     max-width: 28%;
-    box-shadow: 100 100 125px rgba(255, 255, 255, 1);
+    box-shadow: 0 0 150px rgba(0, 0, 0, 0.25);
     border-radius: 5px;
-    border: solid 5px darkred;
+    /* border: solid 5px darkred; */
 
 }
 
@@ -206,7 +212,7 @@ body {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  font-size: 2rem;
+  font-size: 4rem;
   background: transparent;
   color: white;
   border: none;

@@ -5,38 +5,43 @@ const releases = [
         title: "Endless Hours",
         info: "LP",
         year: "2025",
-        cover: "./media/releases/endless-hours-cover.jpg",
-        spotifyEmbed: "https://open.spotify.com/album/56zbigxmWg2J3zOOkREkas?si=sXbE7n_lQ_qW5hdIqUSh6Q",
+        cover: "./media/releases/endless-hours-cover_CONVERT.webp",
+        spotifyEmbed: "https://open.spotify.com/embed/album/56zbigxmWg2J3zOOkREkas?utm_source=generator",
     },
     {
         title: "Dreams",
         info: "Single",
         year: "2025",
-        cover: "./media/releases/dreams-cover.jpg"
+        cover: "./media/releases/dreams-cover_CONVERT.webp",
+        spotifyEmbed:"https://open.spotify.com/embed/album/7rlsDpGwJhDq0Lw9TFa3pk?utm_source=generator&theme=0"
     },
         {
         title: "Right Time",
         info: "Single",
         year: "2024",
-        cover: "./media/releases/right-time-cover.jpg"
+        cover: "./media/releases/right-time-cover_CONVERT.webp",
+        spotifyEmbed:"https://open.spotify.com/embed/track/0Kbcx15PiEPNsNvzGoLFwA?utm_source=generator"
     },
         {
         title: "Over and Over",
         info: "Single",
         year: "2023",
-        cover: "./media/releases/over-and-over-cover.jpg"
+        cover: "./media/releases/over-and-over-cover_CONVERT.webp",
+        spotifyEmbed: "https://open.spotify.com/embed/album/0dteORZVjB4FcAqNqYRag8?utm_source=generator"
     },
         {
         title: "Move Your Body",
         info: "Single",
         year: "2023",
-        cover: "./media/releases/move-your-body-cover.jpg"
+        cover: "./media/releases/move-your-body-cover_CONVERT.webp",
+        spotifyEmbed: "https://open.spotify.com/embed/album/4smjhRlOoOuHEjawOHjmoo?utm_source=generator"
     },
         {
         title: "Thoughtless Feeling",
         info: "Single",
         year: "2023",
-        cover: "./media/releases/thoughtless-feeling-cover.jpg"
+        cover: "./media/releases/thoughtless-feeling-cover_CONVERT.webp",
+        spotifyEmbed: "https://open.spotify.com/embed/album/6OqwBX07u1gDecyoxkmL4Z?utm_source=generator&theme=0"
     },
 ];
 
@@ -54,10 +59,11 @@ function showRelease(index) {
             <div class="spotify-player">
                 <div class="release-title">${release.title}</div>
                 <div class="release-info">${release.info}</div>
-                <iframe style="border-radius:12px" 
-                src="${release.spotifyEmbed}" 
-                width="100%" 
-                height="100%" 
+                <div class="all-releases" id="all-releases">All Releases</div>
+                <iframe style="border-radius:10px" 
+                src="${release.spotifyEmbed}"
+                height="100%"
+                width="100%"
                 frameborder="0" 
                 allowfullscreen="" 
                 allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 

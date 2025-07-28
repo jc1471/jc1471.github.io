@@ -133,24 +133,12 @@ let currentVideo = 0;
 // Reference to id of div in index.html where carousel should appear
 const videoDisplay = document.getElementById("video-display");
 
-// Function do display the release
+// Function do display the video
 function showVideo(index) {
     const video = videos[index];
     videoDisplay.innerHTML = `
-        <div class="video-container">
-            <div class="youtube-player">
-                <iframe style="border-radius:10px" 
-                src="${video.youtubeEmbed}"
-                height="100%"
-                width="100%"
-                frameborder="0" 
-                allowfullscreen="" 
-                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
-                loading="lazy">
-                </iframe> 
-            </div>   
-        </div>
-        `;
+    <iframe width="1244" height="700" 
+    src="${video.youtubeEmbed}" frameborder="0" allowfullscreen></iframe>`;
 }
 
 // Event listeners for left and right arrows

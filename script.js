@@ -57,9 +57,10 @@ function showRelease(index) {
     releaseDisplay.innerHTML = `
         <div class="release-container">
             <div class="spotify-player">
+                <!--
                 <div class="release-title">${release.title}</div>
                 <div class="release-info">${release.info}</div>
-                <div class="all-releases" id="all-releases">All Releases</div>
+                -->
                 <iframe style="border-radius:10px" 
                 src="${release.spotifyEmbed}"
                 height="100%"

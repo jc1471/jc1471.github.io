@@ -45,6 +45,30 @@ const releases = [
     },
 ];
 
+// Store each video with its info
+const videos = [
+    {
+        title: "Dreams",
+        youtubeEmbed: "https://youtube.com/embed/S2uRbuOiAs4?si=P2uvZN0V7nlWZZ5R",
+    },
+    {
+        title: "Right Time",
+        youtubeEmbed: "https://youtube.com/embed/JQCNcYpbHl0?si=a6kQXAW8hxSbsBhi",
+    },
+    {
+        title: "Over and Over",
+        youtubeEmbed: "https://youtube.com/embed/c0wq2fk9j8Y?si=AVauXYE6sSP0L3xn",
+    },
+    {
+        title: "Move Your Body",
+        youtubeEmbed: "https://youtube.com/embed/ZHxou6Fxdqw?si=aGO9T-x6p1_u2Ff2",
+    },
+    {
+        title: "Thoughtless Feeling",
+        youtubeEmbed: "https://youtube.com/embed/tRIyhs0BEDw?si=n-gn-DBFcB8m16tU",
+    },
+];
+
 // Tracks index of which release is currently being shown
 let current = 0;
 
@@ -89,3 +113,56 @@ document.querySelector(".arrow.right").addEventListener("click", () => {
 
 // Show first release on load
 showRelease(current);
+
+
+
+
+
+
+
+// VIDEO
+
+
+
+
+
+
+// Tracks index of which release is currently being shown
+let currentVideo = 0;
+
+// Reference to id of div in index.html where carousel should appear
+const videoDisplay = document.getElementById("video-display");
+
+// Function do display the release
+function showVideo(index) {
+    const video = videos[index];
+    videoDisplay.innerHTML = `
+        <div class="video-container">
+            <div class="youtube-player">
+                <iframe style="border-radius:10px" 
+                src="${video.youtubeEmbed}"
+                height="100%"
+                width="100%"
+                frameborder="0" 
+                allowfullscreen="" 
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+                loading="lazy">
+                </iframe> 
+            </div>   
+        </div>
+        `;
+}
+
+// Event listeners for left and right arrows
+document.querySelector(".video-arrow.left").addEventListener("click", () => {
+    currentVideo = (currentVideo - 1 + videos.length) % videos.length;
+    showVideo(currentVideo);
+});
+
+document.querySelector(".video-arrow.right").addEventListener("click", () => {
+    currentVideo = (currentVideo + 1 ) % videos.length;
+    showVideo(currentVideo);
+});
+
+// Show first release on load
+showVideo(currentVideo);

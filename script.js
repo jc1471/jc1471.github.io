@@ -118,9 +118,10 @@ showRelease(current);
 
 
 
-
-
 // VIDEO
+
+
+
 
 
 
@@ -182,34 +183,3 @@ document.querySelector(".video-arrow.right").addEventListener("click", () => {
 
 // Show first video on load
 showVideo(currentVideo);
-/*
-
-// Tracks index of which release is currently being shown
-let currentVideo = 0;
-
-// Reference to id of div in index.html where carousel should appear
-const videoDisplay = document.getElementById("video-display");
-
-// Function do display the video
-function showVideo(index) {
-    const video = videos[index];
-    videoDisplay.innerHTML = `
-    <iframe width="1244" height="700" 
-    src="${video.youtubeEmbed}" frameborder="0" allowfullscreen></iframe>`;
-}
-
-// Event listeners for left and right arrows
-document.querySelector(".video-arrow.left").addEventListener("click", () => {
-    currentVideo = (currentVideo - 1 + videos.length) % videos.length;
-    showVideo(currentVideo);
-});
-
-document.querySelector(".video-arrow.right").addEventListener("click", () => {
-    currentVideo = (currentVideo + 1 ) % videos.length;
-    showVideo(currentVideo);
-});
-
-// Show first release on load
-showVideo(currentVideo);
-
-*/

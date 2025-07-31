@@ -120,10 +120,14 @@ main {
 /* Socials links */
 
 .socials {
-    position: absolute;
+    position: fixed;
     bottom: 2%;
     margin-bottom: 1rem;
-    z-index: 2;
+    z-index: 3;
+    border-radius: 40px;
+    background-color: RGB(88,16,32);;
+    padding: 7px;
+    box-shadow: 0 30px 40px rgba(0, 0, 0, 0.8);
 } 
 
 .socials ul {
@@ -131,24 +135,56 @@ main {
     margin: 0 auto;
     padding: 0;
     display: flex;
-    justify-content: space-around;
-    width: 100%;
+
+    justify-content: center;
+    align-items: center;
 }
 
 .socials li {
     margin-inline: 8px;
     cursor: pointer;
-    filter: brightness(0) saturate(100%) invert(12%) sepia(80%) saturate(800%) hue-rotate(310deg); /* burgundy tint */
-    transition: transform 0.3s ease;
+    filter: brightness(1) invert(0.75);
+    /*filter: brightness(0) saturate(100%) invert(12%) sepia(80%) saturate(800%) hue-rotate(310deg); /* burgundy tint */
+    /*background-color: RGB(88,16,32);*/
     }
 
-.socials li:hover {
-    transform: background-color(white);
+#mail img {
+    height: 23px;
+    width: auto;
 }
 
-.socials li img {
-    height: 40px;
+
+#instagram img {
+    height: 35px;
     width: auto;
+}
+
+#spotify img {
+    height: 33px;
+    width: auto;
+}
+
+#youtube img {
+    height: 35px;
+    width: auto;
+}
+
+#apple-music img {
+    height: 25px;
+    width: auto;
+}
+#bandcamp img {
+    height: 28px;
+    width: auto;
+}
+
+#soundcloud img {
+    height: 35px;
+    width: auto;
+}
+#linktree img {
+    height: 25px;
+    width: auto;    
 }
 
 /* Music Section */
@@ -171,7 +207,7 @@ main {
 
 .music h2 {
     position: absolute;
-    bottom: 5%;
+    bottom: 10%;
     font-family: "Playfair Display";
     font-size: 1.5rem;
     border: solid 2px darkred;
@@ -283,56 +319,56 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
 }
 
 /* Video Carousel */
 
 .video-carousel-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 1400px;
+  aspect-ratio: 16 / 9;
+  position: relative;
+  margin: 0 auto;
+}
+
+.video-carousel-slide {
+  display: flex;
   position: relative;
   width: 100%;
   height: 100%;
   overflow: hidden;
-  z-index: 2;
-}
-
-.video-carousel-slide {
-  position: relative;
-  width: 100%;
-  height: 60%;
-  top: 20%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
+    box-shadow: 0 40px 70px rgba(0, 0, 0, 0.5);
 }
 
 .video {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    margin: 0 auto;
+  flex: 0 0 100%;
+  opacity: 0;
+  transform: translateX(100%);
+  transition: transform 0.75s ease-in-out, opacity 0.6s ease-in-out;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  
+
 }
 
-/*
-.video-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    border: 6px orange solid;
+.video.active {
+  opacity: 1;
+  transform: translateX(0);
+  position: relative;
+  z-index: 1;
 }
-*/
 
-.video iframe {
-    width: 1305px;
-    color: antiquewhite;
-    /*background-color: RGB(88,16,32);*/
-    box-shadow: 0 90px 70px rgba(0, 0, 0, 0.5);
-    border-radius: 12px;
+.video-carousel-slide iframe {
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
 }
 
 .video-arrow {
@@ -344,16 +380,17 @@ main {
   color: RGB(88,16,32);
   border: none;
   cursor: pointer;
-  z-index: 2;
-  padding: 0.5rem;
+  z-index: 10;
+  padding: 0.5rem 1rem;
+  user-select: none;
 }
 
 .video-arrow.left {
-  left: 5%;
+  left: 25px;
 }
 
 .video-arrow.right {
-  right: 5%;
+  right: 25px;
 }
 
 .shows {
@@ -404,3 +441,21 @@ td button {
     cursor: pointer;
 }
 
+/* Contact Page */
+/*
+.contact {
+    position: relative;
+    background-image: url('./media/Banda 1.jpg');
+    width: 100%;
+    height: 100vh;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: 0% 33%;
+    opacity: 0.75;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+   }
+    */

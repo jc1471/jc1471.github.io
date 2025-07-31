@@ -118,8 +118,6 @@ showRelease(current);
 
 
 
-
-
 // VIDEO
 
 
@@ -127,42 +125,61 @@ showRelease(current);
 
 
 
-// Tracks index of which release is currently being shown
+// Reference to carousel slide container
+const videoContainer = document.getElementById("video-carousel-slide");
+
+// 1. Dynamically create each video slide div with iframe
+videoContainer.innerHTML = videos.map((video, i) => `
+  <div class="video${i === 0 ? " active" : ""}">
+    <iframe 
+      src="${video.youtubeEmbed}" 
+      frameborder="0" 
+      allowfullscreen
+      allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+      loading="lazy"
+    ></iframe>
+  </div>
+`).join("");
+
+// Get all video slides
+const videoSlides = document.querySelectorAll(".video");
 let currentVideo = 0;
 
-// Reference to id of div in index.html where carousel should appear
-const videoDisplay = document.getElementById("video-display");
-
-// Function do display the release
+// Show video by index with slide + fade effect
 function showVideo(index) {
-    const video = videos[index];
-    videoDisplay.innerHTML = `
-        <div class="video-container">
-            <div class="youtube-player">
-                <iframe style="border-radius:10px" 
-                src="${video.youtubeEmbed}"
-                height="100%"
-                width="100%"
-                frameborder="0" 
-                allowfullscreen="" 
-                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
-                loading="lazy">
-                </iframe> 
-            </div>   
-        </div>
-        `;
+  videoSlides.forEach((slide, i) => {
+    if (i === index) {
+      slide.classList.add("active");
+      slide.style.transform = "translateX(0)";
+      slide.style.opacity = "1";
+      slide.style.position = "relative";
+      slide.style.zIndex = "1";
+    } else if (i < index) {
+      slide.classList.remove("active");
+      slide.style.transform = "translateX(-100%)";
+      slide.style.opacity = "0";
+      slide.style.position = "absolute";
+      slide.style.zIndex = "0";
+    } else {
+      slide.classList.remove("active");
+      slide.style.transform = "translateX(100%)";
+      slide.style.opacity = "0";
+      slide.style.position = "absolute";
+      slide.style.zIndex = "0";
+    }
+  });
 }
 
-// Event listeners for left and right arrows
+// Button click events
 document.querySelector(".video-arrow.left").addEventListener("click", () => {
-    currentVideo = (currentVideo - 1 + videos.length) % videos.length;
-    showVideo(currentVideo);
+  currentVideo = (currentVideo - 1 + videos.length) % videos.length;
+  showVideo(currentVideo);
 });
 
 document.querySelector(".video-arrow.right").addEventListener("click", () => {
-    currentVideo = (currentVideo + 1 ) % videos.length;
-    showVideo(currentVideo);
+  currentVideo = (currentVideo + 1) % videos.length;
+  showVideo(currentVideo);
 });
 
-// Show first release on load
+// Show first video on load
 showVideo(currentVideo);
